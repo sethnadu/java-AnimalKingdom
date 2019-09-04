@@ -80,15 +80,15 @@ public class Main
     System.out.println();
 
     System.out.println("* Animals breath with lungs *");
-    showAnimals(animalList, a -> (a.getBreath() == "Lungs"));
+    showAnimals(animalList, a -> (a.getBreath().equals("Lungs")));
     System.out.println();
 
     System.out.println("* Animals breath with lungs and named in 1758 *");
-    showAnimals(animalList, ((a -> a.getBreath() == "Lungs" && a.getYear() == 1758)));
+    showAnimals(animalList, ((a -> a.getBreath().equals("Lungs") && a.getYear() == 1758)));
     System.out.println();
 
     System.out.println("* Animals breath with lungs and lay eggs");
-    showAnimals(animalList, ((a -> a.getBreath() == "Lungs" && a.getReproduce() == "Eggs")));
+    showAnimals(animalList, ((a -> a.getBreath().equals("Lungs") && a.getReproduce() == "Eggs")));
     System.out.println();
 
     System.out.println("* Animals sorted alphabetically and named in 1758 *");
@@ -101,7 +101,7 @@ public class Main
     System.out.println();
     System.out.println("* Mammals Sorted using getSpecies *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
-    showAnimals(animalList, (a -> a.getSpecies() == "Mammals"));
+    showAnimals(animalList, (a -> a.getSpecies().equals("Mammals")));
     System.out.println();
     System.out.println("* Mammals Sorted using getId *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
@@ -116,7 +116,7 @@ public class Main
     System.out.println();
     System.out.println("* Birds Sorted using getSpecies *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
-    showAnimals(animalList, (a -> a.getSpecies() == "Birds"));
+    showAnimals(animalList, (a -> a.getSpecies().equals("Birds")));
     System.out.println();
     System.out.println("* Birds Sorted using getId *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
@@ -132,7 +132,7 @@ public class Main
     System.out.println();
     System.out.println("* Fish Sorted using getSpecies *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
-    showAnimals(animalList, (a -> a.getSpecies() == "Fish"));
+    showAnimals(animalList, (a -> a.getSpecies().equals("Fish")));
     System.out.println();
     System.out.println("* Fish Sorted using getId *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
