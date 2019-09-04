@@ -17,4 +17,14 @@ public abstract class AbstractAnimals
    public abstract String getBreath();
    public abstract String getReproduce();
 
+   public int getYear()
+   {
+       return year;
+   }
+
+   public String getName()
+   {
+       return name;
+   }
+
 }

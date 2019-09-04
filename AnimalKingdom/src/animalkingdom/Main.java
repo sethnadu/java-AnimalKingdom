@@ -4,6 +4,16 @@ import java.util.*;
 
 public class Main
 {
+    public static void showAnimals(ArrayList<AbstractAnimals> animals, CheckAnimal tester)
+    {
+        for(AbstractAnimals a : animals)
+        {
+            if(tester.test(a))
+            {
+                System.out.println("Name: " + a.getName() + " Breath: " + a.getBreath() + " Year Named: " + a.getYear() + " Moves: " + a.getMove() + " Reproduce: " + a.getReproduce());
+            }
+        }
+    }
     public static void main(String [] args)
     {
     //Mammals
@@ -27,5 +37,64 @@ public class Main
     Fish catfish = new Fish(13, "Catfish", 1817);
     Fish perch = new Fish(14, "Perch", 1758);
 
+    ArrayList<AbstractAnimals> animalList = new ArrayList <AbstractAnimals>();
+    animalList.add(panda);
+    animalList.add(zebra);
+    animalList.add(koala);
+    animalList.add(sloth);
+    animalList.add(armadillo);
+    animalList.add(raccoon);
+    animalList.add(bigfoot);
+    animalList.add(pigeon);
+    animalList.add(peacock);
+    animalList.add(toucan);
+    animalList.add(parrot);
+    animalList.add(swan);
+    animalList.add(salmon);
+    animalList.add(catfish);
+    animalList.add(perch);
+
+    System.out.println("** All Animals ** ");
+    System.out.println(animalList.toString());
+    
+
+    System.out.println("*** Sorting ***");
+    System.out.println();
+
+    animalList.forEach((a) -> System.out.println(a));
+    
+    System.out.println("* Animals sorted Alphabetically");
+    animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    animalList.forEach((a) -> System.out.println(a));
+    System.out.println();
+
+    System.out.println("* Animals sorted decending order by year *");
+    animalList.sort((a1, a2) -> a2.getYear() - a1.getYear());
+    animalList.forEach((a) -> System.out.println(a));
+    System.out.println();
+
+    System.out.println("* Animals sorted by how they move *");
+    animalList.sort((a1, a2) -> a1.getMove().compareToIgnoreCase(a2.getMove()));
+    animalList.forEach((a) -> System.out.println(a));
+    System.out.println();
+
+    System.out.println("* Animals breath with lungs *");
+    showAnimals(animalList, a -> (a.getBreath() == "Lungs"));
+    System.out.println();
+
+    System.out.println("* Animals breath with lungs and named in 1758 *");
+    showAnimals(animalList, ((a -> a.getBreath() == "Lungs" && a.getYear() == 1758)));
+    System.out.println();
+
+    System.out.println("* Animals breath with lungs and lay eggs");
+    showAnimals(animalList, ((a -> a.getBreath() == "Lungs" && a.getReproduce() == "Eggs")));
+    System.out.println();
+
+    System.out.println("* Animals sorted alphabetically named in 1758 *");
+    animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    showAnimals(animalList, (a -> a.getYear() == 1758));
+    System.out.println();
+
+    
     }
 }

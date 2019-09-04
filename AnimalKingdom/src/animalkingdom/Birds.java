@@ -26,5 +26,17 @@ public class Birds extends AbstractAnimals
         return "Eggs";
     }
 
+    @Override
+    public String toString()
+    {
+        return "\nBirds{" +
+        "Id: '" + id + '\'' +
+        ", Name: " + name + 
+        ", Year: " + year + 
+        ", Move: " + getMove() + 
+        ", Breaths: " + getBreath() + 
+        ", Reproduce: " + getReproduce() +
+        '}';
+    }
 
 }

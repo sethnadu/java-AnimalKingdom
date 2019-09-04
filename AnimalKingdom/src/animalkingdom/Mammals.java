@@ -26,5 +26,18 @@ public class Mammals extends AbstractAnimals
         return "Live Births";
     }
 
+    @Override
+    public String toString()
+    {
+        return "\nMammals{" +
+        "Id: '" + id + '\'' +
+        ", Name: " + name + 
+        ", Year: " + year + 
+        ", Move: " + getMove() + 
+        ", Breaths: " + getBreath() + 
+        ", Reproduce: " + getReproduce() +
+        '}';
+    }
+
 
 }
