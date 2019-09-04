@@ -28,4 +28,9 @@ public abstract class AbstractAnimals
        return name;
    }
 
+   public int getId()
+   {
+       return id;
+   }
+
 }

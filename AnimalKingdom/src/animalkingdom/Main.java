@@ -96,19 +96,42 @@ public class Main
     showAnimals(animalList, (a -> a.getYear() == 1758));
     System.out.println();
 
-    System.out.println("* Alphabetically sorted Mammals");
+    System.out.println("** Alphabetically sorted Mammals **");
+    System.out.println();
+    System.out.println();
+    System.out.println("* Mammals Sorted using getSpecies *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
     showAnimals(animalList, (a -> a.getSpecies() == "Mammals"));
     System.out.println();
+    System.out.println("* Mammals Sorted using getId *");
+    animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    showAnimals(animalList, (a -> a.getId() <= 6 ));
+    System.out.println();
 
-    System.out.println("* Alphabetically sorted Birds");
+    System.out.println("** Alphabetically sorted Birds **");
+    System.out.println();
+    System.out.println();
+    System.out.println("* Birds Sorted using getSpecies *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
     showAnimals(animalList, (a -> a.getSpecies() == "Birds"));
     System.out.println();
+    System.out.println("* Birds Sorted using getId *");
+    animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    showAnimals(animalList, ((a -> (a.getId() > 6) && (a.getId() < 12))));
+    System.out.println();
 
-    System.out.println("* Alphabetically sorted Fish");
+
+    System.out.println("** Alphabetically sorted Fish **");
+    System.out.println();
+    System.out.println();
+    System.out.println("* Fish Sorted using getSpecies *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
     showAnimals(animalList, (a -> a.getSpecies() == "Fish"));
     System.out.println();
+    System.out.println("* Fish Sorted using getId *");
+    animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    showAnimals(animalList, (a -> a.getId() >= 12 ));
+    System.out.println();
+
     }
 }
