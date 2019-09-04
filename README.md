@@ -23,7 +23,7 @@ Using a combination of interfaces, abstract classes, and lambda expressions, stu
     * Birds move - fly, breath - lungs, reproduce - eggs
     * Fish move - swim, breath - gills, reproduce - eggs
 
-Hint: think about abstract classes and creating an arraylist using an abstract class type.
+Hint: think about abstract classes and creating an arraylist using an abstract class type.  
 
 * Create a collection for the animals using the following data
     * Mammals:
