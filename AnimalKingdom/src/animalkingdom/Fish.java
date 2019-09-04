@@ -35,7 +35,7 @@ public class Fish extends AbstractAnimals
     @Override
     public String toString()
     {
-        return "\nFish{" +
+        return "Fish{" +
         "Id: '" + id + '\'' +
         ", Name: " + name + 
         ", Year: " + year + 

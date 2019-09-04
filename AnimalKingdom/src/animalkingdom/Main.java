@@ -54,21 +54,22 @@ public class Main
     animalList.add(catfish);
     animalList.add(perch);
 
+    //============= SYSTEM OUT INFO BELOW =================//
+
+    System.out.println();
     System.out.println("** All Animals ** ");
     System.out.println(animalList.toString());
-    
+    System.out.println();
 
     System.out.println("*** Sorting ***");
     System.out.println();
-
-    animalList.forEach((a) -> System.out.println(a));
     
-    System.out.println("* Animals sorted Alphabetically");
+    System.out.println("* Animals sorted Alphabetically by Name");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
     animalList.forEach((a) -> System.out.println(a));
     System.out.println();
 
-    System.out.println("* Animals sorted decending order by year *");
+    System.out.println("* Animals sorted decending order by Year Named*");
     animalList.sort((a1, a2) -> a2.getYear() - a1.getYear());
     animalList.forEach((a) -> System.out.println(a));
     System.out.println();
@@ -90,7 +91,7 @@ public class Main
     showAnimals(animalList, ((a -> a.getBreath() == "Lungs" && a.getReproduce() == "Eggs")));
     System.out.println();
 
-    System.out.println("* Animals sorted alphabetically named in 1758 *");
+    System.out.println("* Animals sorted alphabetically and named in 1758 *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
     showAnimals(animalList, (a -> a.getYear() == 1758));
     System.out.println();

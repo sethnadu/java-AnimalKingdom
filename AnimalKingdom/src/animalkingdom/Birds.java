@@ -35,7 +35,7 @@ public class Birds extends AbstractAnimals
     @Override
     public String toString()
     {
-        return "\nBirds{" +
+        return "Birds{" +
         "Id: '" + id + '\'' +
         ", Name: " + name + 
         ", Year: " + year + 
