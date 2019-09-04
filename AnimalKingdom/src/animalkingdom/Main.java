@@ -107,6 +107,9 @@ public class Main
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
     showAnimals(animalList, (a -> a.getId() <= 6 ));
     System.out.println();
+    System.out.println("* Mammals Sorted using instanceof *");
+    showAnimals(animalList, (a -> a instanceof Mammals));
+    System.out.println();
 
     System.out.println("** Alphabetically sorted Birds **");
     System.out.println();
@@ -118,6 +121,9 @@ public class Main
     System.out.println("* Birds Sorted using getId *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
     showAnimals(animalList, ((a -> (a.getId() > 6) && (a.getId() < 12))));
+    System.out.println();
+    System.out.println("* Birds Sorted using instanceof *");
+    showAnimals(animalList, (a -> a instanceof Birds));
     System.out.println();
 
 
@@ -131,6 +137,9 @@ public class Main
     System.out.println("* Fish Sorted using getId *");
     animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
     showAnimals(animalList, (a -> a.getId() >= 12 ));
+    System.out.println();
+    System.out.println("* Fish Sorted using instanceof *");
+    showAnimals(animalList, (a -> a instanceof Fish));
     System.out.println();
 
     }

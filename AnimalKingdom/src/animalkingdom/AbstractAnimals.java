@@ -18,6 +18,11 @@ public abstract class AbstractAnimals
    public abstract String getReproduce();
    public abstract String getSpecies();
 
+   public String getEat() 
+   {
+        return "Eat with their mouths";
+   }
+   
    public int getYear()
    {
        return year;
