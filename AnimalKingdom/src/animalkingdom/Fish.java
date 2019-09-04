@@ -27,6 +27,12 @@ public class Fish extends AbstractAnimals
     }
 
     @Override
+    public String getSpecies()
+    {
+        return "Fish";
+    }
+
+    @Override
     public String toString()
     {
         return "\nFish{" +

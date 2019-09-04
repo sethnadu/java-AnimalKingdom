@@ -27,6 +27,12 @@ public class Birds extends AbstractAnimals
     }
 
     @Override
+    public String getSpecies()
+    {
+        return "Birds";
+    }
+
+    @Override
     public String toString()
     {
         return "\nBirds{" +

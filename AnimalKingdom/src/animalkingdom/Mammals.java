@@ -27,9 +27,15 @@ public class Mammals extends AbstractAnimals
     }
 
     @Override
+    public String getSpecies()
+    {
+        return "Mammals";
+    }
+
+    @Override
     public String toString()
     {
-        return "\nMammals{" +
+        return "\nMammals{" + 
         "Id: '" + id + '\'' +
         ", Name: " + name + 
         ", Year: " + year + 

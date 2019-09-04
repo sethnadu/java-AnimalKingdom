@@ -16,6 +16,7 @@ public abstract class AbstractAnimals
    public abstract String getMove();
    public abstract String getBreath();
    public abstract String getReproduce();
+   public abstract String getSpecies();
 
    public int getYear()
    {

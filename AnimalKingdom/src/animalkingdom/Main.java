@@ -10,7 +10,7 @@ public class Main
         {
             if(tester.test(a))
             {
-                System.out.println("Name: " + a.getName() + " Breath: " + a.getBreath() + " Year Named: " + a.getYear() + " Moves: " + a.getMove() + " Reproduce: " + a.getReproduce());
+                System.out.println("Species: " + a.getSpecies() + ", Name: " + a.getName() + ", Breath: " + a.getBreath() + ", Year Named: " + a.getYear() + ", Moves: " + a.getMove() + ", Reproduce: " + a.getReproduce());
             }
         }
     }
@@ -95,6 +95,19 @@ public class Main
     showAnimals(animalList, (a -> a.getYear() == 1758));
     System.out.println();
 
-    
+    System.out.println("* Alphabetically sorted Mammals");
+    animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    showAnimals(animalList, (a -> a.getSpecies() == "Mammals"));
+    System.out.println();
+
+    System.out.println("* Alphabetically sorted Birds");
+    animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    showAnimals(animalList, (a -> a.getSpecies() == "Birds"));
+    System.out.println();
+
+    System.out.println("* Alphabetically sorted Fish");
+    animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    showAnimals(animalList, (a -> a.getSpecies() == "Fish"));
+    System.out.println();
     }
 }
